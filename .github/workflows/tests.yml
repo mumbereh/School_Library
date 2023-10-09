@@ -17,3 +17,10 @@ jobs:
           gem install --no-document rspec -v '>=3.0, < 4.0'
       - name: RSpec Report
         run: rspec --force-color --format documentation
+
+   
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: rspec-results
+          path: ./path/to/rspec-results 
