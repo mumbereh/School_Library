@@ -1,1 +1,3 @@
-gem 'rubocop', '1.56.4'
+source 'https://rubygems.org'
+
+gem 'rubocop', '>= 1.0', '< 2.0'
