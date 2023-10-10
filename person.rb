@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-# Person class
 class Person < Nameable
   attr_accessor :name, :age
 
-  def initialize(id, age, name: 'Unknown', parent_permission: true)
+  def initialize(id, name: 'Unknown', age: 0, parent_permission: true)
     super()
     @id = id
     @name = name

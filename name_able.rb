@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# Nameable interface
 class Nameable
   def correct_name
     raise NotImplementedError, 'Subclasses must implement correct_name method'
