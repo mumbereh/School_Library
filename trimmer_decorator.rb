@@ -1,5 +1,6 @@
+# TrimmerDecorator
 class TrimmerDecorator < Decorator
   def correct_name
-    super.correct_name[0, 10]
+    super[0..9] # Truncate the name to a maximum of 10 characters
   end
 end

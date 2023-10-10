@@ -1,5 +1,6 @@
+# CapitalizeDecorator
 class CapitalizeDecorator < Decorator
   def correct_name
-    super.correct_name.capitalize
+    super.capitalize
   end
 end
