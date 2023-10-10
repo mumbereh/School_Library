@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-# frozen_string_literal: true
-
-=======
-# Person class
->>>>>>> parent of f323991 (configured linters)
 class Person < Nameable
   attr_accessor :name, :age
 
