@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Person class
 class Person < Nameable
   attr_accessor :name, :age

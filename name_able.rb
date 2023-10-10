@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Nameable interface
 class Nameable
   def correct_name

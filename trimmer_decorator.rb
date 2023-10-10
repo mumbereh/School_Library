@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # TrimmerDecorator
 class TrimmerDecorator < Decorator
   def correct_name
