@@ -1,7 +1,5 @@
-# frozen_string_literal: true
-
 class Decorator < Nameable
-  def initialize(nameable)
+  def initialize()
     super(nameable)
   end
 
