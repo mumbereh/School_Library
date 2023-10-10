@@ -1,4 +1,9 @@
-require_relative 'nameable'
+class Decorator
+  def initialize(component)
+    @component = component
+  end
 
-class TrimmerDecorator < Decorator
+  def correct_name
+    @component.correct_name
+  end
 end
