@@ -1,6 +1,11 @@
+# decorator.rb
+
+# decorator.rb
+
 class Decorator < Nameable
-  def initialize()
-    super(nameable)
+  def initialize(nameable)
+    super()
+    @nameable = nameable
   end
 
   def correct_name
