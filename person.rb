@@ -1,13 +1,10 @@
-# person.rb
-
-require_relative 'nameable'
-
-class Person < Nameable
+class Person
   attr_accessor :name, :age
   attr_reader :id
 
+  has_many :rentals
+
   def initialize(id, name: 'Unknown', age: 0, parent_permission: true)
-    super()
     @id = id
     @name = name
     @age = age
@@ -20,6 +17,10 @@ class Person < Nameable
 
   def correct_name
     @name
+  end
+
+  def add_rental(book, date)
+    Rental.new(date, book, self)
   end
 
   private
