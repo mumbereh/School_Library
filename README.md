@@ -1,5 +1,17 @@
 <a name="readme-top"></a>
 
+
+<div align="center">
+  
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h3><b>Microverse README Template</b></h3>
+
+</div>
+
+
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -38,9 +50,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[#all]**
-- **[#any]**
-- **[#filter]**
+- **This project was built with ruby**
+- **he project code is clear for future use]***
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,9 +76,8 @@ To use this project :
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **[#max]**
-- **[#min]**
-- **[#sort]**
+- **Add ui for user's interraction**
+- **Add DataBase**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
