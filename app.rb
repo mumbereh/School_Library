@@ -1,66 +1,50 @@
-class Person
-  attr_accessor :id, :name, :role
+class App
+  # ...
 
-  def initialize(id, name, role)
-    @id = id
-    @name = name
-    @role = role
-  end
-end
+  def create_book
+    print 'Enter book title: '
+    title = gets.chomp
+    print 'Enter author: '
+    author = gets.chomp
 
-class Book
-  attr_accessor :id, :title
-
-  def initialize(id, title)
-    @id = id
-    @title = title
-  end
-end
-
-class Rental
-  attr_accessor :id, :person_id, :book_id
-
-  def initialize(id, person_id, book_id)
-    @id = id
-    @person_id = person_id
-    @book_id = book_id
-  end
-end
-
-class Library
-  def initialize
-    @people = []
-    @books = []
-    @rentals = []
+    @library.create_book(title: title, author: author)
+    puts 'Book created successfully.'
   end
 
-  def list_all_people
-    @people
+  def create_rental
+    puts 'Select a person to create a rental for:'
+    list_all_people
+    print 'Enter the position of the person: '
+    person_position = gets.chomp.to_i
+
+    puts 'Select a book to create a rental for:'
+    list_all_books
+    print 'Enter the position of the book: '
+    book_position = gets.chomp.to_i
+
+    print 'Enter rental date: '
+    date = gets.chomp
+
+    @library.create_rental(person_position, book_position, date)
+    puts 'Rental created successfully.'
   end
 
-  def list_all_books
-    @books
-  end
+  def create_person
+    print 'Enter person name: '
+    name = gets.chomp
+    print 'Choose role (1 for teacher, 2 for student): '
+    role_choice = gets.chomp.to_i
 
-  def create_person(id, name, role)
-    person = Person.new(id, name, role)
-    @people << person
-    person
-  end
+    role = case role_choice
+           when 1
+             'teacher'
+           when 2
+             'student'
+           else
+             'unknown'
+           end
 
-  def create_book(id, title)
-    book = Book.new(id, title)
-    @books << book
-    book
-  end
-
-  def create_rental(id, person_id, book_id)
-    rental = Rental.new(id, person_id, book_id)
-    @rentals << rental
-    rental
-  end
-
-  def list_rentals_for_person(person_id)
-    @rentals.select { |rental| rental.person_id == person_id }
+    person = @library.create_person(name: name, role: role)
+    puts "#{person.role.capitalize} created successfully."
   end
 end

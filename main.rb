@@ -1,14 +1,17 @@
 require_relative 'app'
+require_relative 'library'
 
 def main
-  library = Library.new
+  Library.new
+  app = App.new
+
   menu_options = {
-    1 => method(:list_all_books),
-    2 => method(:list_all_people),
-    3 => method(:create_person),
-    4 => method(:create_book),
-    5 => method(:create_rental),
-    6 => method(:list_rentals_for_person),
+    1 => app.method(:list_all_books),
+    2 => app.method(:list_all_people),
+    3 => app.method(:create_person),
+    4 => app.method(:create_book),
+    5 => app.method(:create_rental),
+    6 => app.method(:list_rentals_for_person),
     7 => method(:exit_program)
   }
 
@@ -19,7 +22,7 @@ def main
     action = menu_options[choice]
 
     if action
-      action.call(library)
+      action.call
     else
       invalid_choice
     end

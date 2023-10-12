@@ -1,14 +1,14 @@
+# person.rb
 class Person
   attr_accessor :name, :age
   attr_reader :id
-
-  has_many :rentals
 
   def initialize(id, name: 'Unknown', age: 0, parent_permission: true)
     @id = id
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @rentals = []
   end
 
   def can_use_services?
@@ -20,7 +20,9 @@ class Person
   end
 
   def add_rental(book, date)
-    Rental.new(date, book, self)
+    rental = Rental.new(date, book, self)
+    @rentals << rental
+    rental
   end
 
   private
