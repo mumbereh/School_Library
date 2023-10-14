@@ -78,7 +78,7 @@ To use this project :
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/mumbereh/School_Library.git/issues).
+Feel free to check the [issues page](https://github.com/mumbereh/School_Library/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
